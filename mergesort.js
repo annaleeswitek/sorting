@@ -1,7 +1,7 @@
 function mergeSort(array, index = 0, length = array.length) {
 
   if(length > 1) {
-    let pivot = index + Math.floor(length/2);
+    const pivot = index + Math.floor(length/2);
 
     mergeSort(array, index, pivot - index);
     mergeSort(array, pivot, index + length - pivot);
@@ -36,5 +36,7 @@ function mergeSort(array, index = 0, length = array.length) {
       array[index + i] = newArr[i];
     }
   }
+
+  return array;
 
 }
